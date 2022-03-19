@@ -1,0 +1,34 @@
+<!-- flask template for memorizer -->
+<html>
+<head>
+    <title>Memorize It</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+    <h1>Memorize It!</h1>
+    <p>This tool will help you quickly create memorization aids for lines, poems and other recitations.</p>
+    <p>Type what you need to memorize into a Word document, and <strong>Bold</strong> or <i>Italicize</i> text you would like to keep visible. Cues, headings, etc.</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <br>
+        <input type="submit" value="Generate Memorization Aids">
+    </form>
+    <p>Your downloaded document will consist of:</p>
+    <ol>
+        <li>Your original text<ul>
+            <li>"<code>German Shepherd</code>"</li>
+        </ul>
+        <li>A version of your text in a 'fill in the blank' format, where you can see each word's length but no more than the first letter<ul>
+            <li>"<code>G_____ S_______</code>"</li>
+        </ul>
+        <li>A version of your text with only the first letter of each word<ul>
+            <li>"<code>G S</code>"</li>
+        </ul>
+        </li>
+    </ol>
+</ol>
+   
+    <p>Print out these documents with Word and cross-reference them as you read. Make it a goal to be able to read off of the First Letter variant alone, and then, completely from memory.</p>
+    <div style="height: 60px;"></div>
+</body>
+</html>
